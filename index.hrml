@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ahmad Syarifulloh | Portfolio</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    /* Simple fade-up animation */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-up {
+      opacity: 0;
+      animation: fadeUp 0.8s ease-out forwards;
+    }
+
+    .delay-1 { animation-delay: 0.15s; }
+    .delay-2 { animation-delay: 0.3s; }
+    .delay-3 { animation-delay: 0.45s; }
+    .delay-4 { animation-delay: 0.6s; }
+
+    .card-hover {
+      transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+    }
+
+    .card-hover:hover {
+      transform: translateY(-6px) scale(1.01);
+      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.25);
+      background-color: rgba(15, 23, 42, 0.9);
+    }
+
+    .blob {
+      filter: blur(70px);
+      opacity: 0.6;
+      mix-blend-mode: screen;
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100">
+  <!-- Background blobs -->
+  <div class="fixed inset-0 -z-10 overflow-hidden">
+    <div class="blob absolute -top-32 -left-32 w-72 h-72 bg-emerald-500 rounded-full animate-pulse"></div>
+    <div class="blob absolute top-1/3 -right-32 w-80 h-80 bg-indigo-500 rounded-full animate-pulse"></div>
+    <div class="blob absolute bottom-0 left-1/4 w-72 h-72 bg-amber-400 rounded-full animate-pulse"></div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="sticky top-0 z-20 backdrop-blur bg-slate-950/70 border-b border-slate-800/60">
+    <nav class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-emerald-400 to-amber-400 flex items-center justify-center text-slate-900 font-bold text-lg shadow-lg">
+          A
+        </div>
+        <span class="font-semibold tracking-tight">Ahmad Syarifulloh</span>
+      </div>
+      <div class="flex gap-4 text-sm">
+        <a href="#about" class="hover:text-emerald-300 transition">About</a>
+        <a href="#projects" class="hover:text-emerald-300 transition">Projects</a>
+        <a href="#campus" class="hover:text-emerald-300 transition">Campus</a>
+        <a href="#contact" class="hover:text-emerald-300 transition">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4">
+    <!-- Hero -->
+    <section id="hero" class="min-h-[80vh] flex flex-col md:flex-row items-center gap-10 md:gap-16 pt-10 md:pt-16">
+      <!-- Text -->
+      <div class="flex-1 fade-up">
+        <p class="text-emerald-300 font-medium mb-2 uppercase tracking-[0.2em] text-xs">
+          IT Student · Universitas Raharja
+        </p>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4">
+          Building interactive web experiences & automation.
+        </h1>
+        <p class="text-slate-300 text-sm md:text-base max-w-xl mb-6">
+          Hi! I’m <span class="font-semibold text-emerald-300">Ahmad Syarifulloh</span>, a
+          <span class="font-semibold">Informatics Engineering (S1 Teknik Informatika)</span> student
+          at <span class="font-semibold">Universitas Raharja</span>, Tangerang. I love working with
+          modern web technologies, Tailwind CSS, and automation projects like WhatsApp auto-order bots.
+        </p>
+        <div class="flex flex-wrap gap-3 mb-6">
+          <a href="#projects"
+             class="inline-flex items-center gap-2 rounded-2xl bg-emerald-400 text-slate-950 font-semibold px-4 py-2 text-sm shadow-lg shadow-emerald-500/40 hover:shadow-emerald-400/70 hover:-translate-y-[2px] transition-transform">
+            View Projects
+            <span class="text-lg">↗</span>
+          </a>
+          <a href="#contact"
+             class="inline-flex items-center gap-2 rounded-2xl border border-slate-700 px-4 py-2 text-sm hover:border-emerald-400 hover:text-emerald-200 transition-colors">
+            Contact Me
+          </a>
+        </div>
+        <div class="flex flex-wrap gap-2 text-xs text-slate-300">
+          <span class="px-3 py-1 rounded-full bg-slate-900/70 border border-slate-700/70">Tailwind CSS</span>
+          <span class="px-3 py-1 rounded-full bg-slate-900/70 border border-slate-700/70">JavaScript</span>
+          <span class="px-3 py-1 rounded-full bg-slate-900/70 border border-slate-700/70">WhatsApp Bot</span>
+          <span class="px-3 py-1 rounded-full bg-slate-900/70 border border-slate-700/70">Automation</span>
+        </div>
+      </div>
+
+      <!-- Profile Card -->
+      <div class="flex-1 flex justify-center fade-up delay-2">
+        <div class="relative w-64 h-64 md:w-72 md:h-72">
+          <div class="absolute inset-0 rounded-3xl bg-gradient-to-tr from-emerald-400 via-amber-400 to-indigo-500 blur-xl opacity-60"></div>
+          <div class="relative h-full rounded-3xl bg-slate-950/90 border border-slate-800 shadow-xl p-4 flex flex-col justify-between">
+            <div class="flex items-center gap-4">
+              <div class="w-20 h-20 rounded-2xl overflow-hidden border border-slate-700 bg-slate-800">
+                <!-- GANTI dengan foto kamu sendiri -->
+                <img src="assets/foto-saya.jpg" alt="Ahmad Syarifulloh" class="w-full h-full object-cover">
+              </div>
+              <div>
+                <p class="text-xs text-slate-400 mb-1">Portfolio Owner</p>
+                <h2 class="text-lg font-semibold">Ahmad Syarifulloh</h2>
+                <p class="text-xs text-emerald-300 font-medium">S1 Teknik Informatika · Universitas Raharja</p>
+              </div>
+            </div>
+            <div class="mt-4 text-xs text-slate-300 space-y-1">
+              <p>💻 Focus: Web development & automation</p>
+              <p>🤖 Project: WhatsApp Auto Order Bot</p>
+              <p>📍 Tangerang, Banten – Indonesia</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-12 md:py-16 border-t border-slate-800/70">
+      <div class="grid md:grid-cols-2 gap-10 items-start">
+        <div class="fade-up">
+          <h2 class="text-2xl md:text-3xl font-semibold mb-3">About Me</h2>
+          <p class="text-slate-300 text-sm md:text-base mb-4">
+            I am an <span class="font-semibold text-emerald-300">Informatics Engineering student (S1 Teknik Informatika)</span>
+            at <span class="font-semibold">Universitas Raharja</span>, a modern university in Tangerang that focuses on
+            technology, business, and entrepreneurship.
+          </p>
+          <p class="text-slate-300 text-sm md:text-base mb-4">
+            The study program emphasizes software engineering, smart systems, and digital innovation. I really enjoy
+            turning ideas into digital products, especially web applications and automation tools that can help real
+            businesses and users.
+          </p>
+          <p class="text-slate-300 text-sm md:text-base">
+            My current interests include building interactive UIs with Tailwind CSS, exploring APIs, and creating bots
+            that simplify repetitive workflows such as ordering through WhatsApp.
+          </p>
+        </div>
+
+        <div class="fade-up delay-2">
+          <div class="grid grid-cols-2 gap-4">
+            <div class="rounded-2xl bg-slate-900/80 border border-slate-800 p-4 card-hover">
+              <p class="text-xs text-slate-400 mb-1">Main Skills</p>
+              <p class="text-sm font-semibold">HTML, CSS, Tailwind, JS</p>
+            </div>
+            <div class="rounded-2xl bg-slate-900/80 border border-slate-800 p-4 card-hover">
+              <p class="text-xs text-slate-400 mb-1">Interests</p>
+              <p class="text-sm font-semibold">Automation, Bots, UI/UX</p>
+            </div>
+            <div class="rounded-2xl bg-slate-900/80 border border-slate-800 p-4 card-hover">
+              <p class="text-xs text-slate-400 mb-1">Tools</p>
+              <p class="text-sm font-semibold">Git, GitHub, VS Code</p>
+            </div>
+            <div class="rounded-2xl bg-slate-900/80 border border-slate-800 p-4 card-hover">
+              <p class="text-xs text-slate-400 mb-1">Languages</p>
+              <p class="text-sm font-semibold">Bahasa Indonesia, English</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="py-12 md:py-16 border-t border-slate-800/70">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="text-2xl md:text-3xl font-semibold">Projects</h2>
+        <span class="text-xs uppercase tracking-[0.2em] text-slate-400">Selected works</span>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- WhatsApp Bot -->
+        <article class="rounded-3xl bg-slate-900/80 border border-slate-800 p-5 card-hover fade-up">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-lg font-semibold">WhatsApp Auto Order Bot</h3>
+            <span class="px-3 py-1 rounded-full text-[11px] bg-emerald-500/10 text-emerald-300 border border-emerald-400/40">
+              Automation
+            </span>
+          </div>
+          <p class="text-sm text-slate-300 mb-4">
+            A WhatsApp bot that helps customers place orders automatically through chat. The bot guides users through
+            product selection, quantity, and address, then forwards the structured data to the system or admin for
+            processing. This makes the ordering process faster and more efficient.
+          </p>
+          <ul class="text-xs text-slate-400 space-y-1 mb-4 list-disc list-inside">
+            <li>Auto-reply for new and returning customers</li>
+            <li>Step-by-step order flow (product → quantity → address)</li>
+            <li>Can be integrated with a simple database or spreadsheet</li>
+          </ul>
+          <div class="flex flex-wrap gap-2 text-[11px]">
+            <span class="px-2.5 py-1 rounded-full bg-slate-800 border border-slate-700">Node.js / JavaScript</span>
+            <span class="px-2.5 py-1 rounded-full bg-slate-800 border border-slate-700">WhatsApp API / Library</span>
+            <span class="px-2.5 py-1 rounded-full bg-slate-800 border border-slate-700">GitHub</span>
+          </div>
+        </article>
+
+        <!-- Portfolio site -->
+        <article class="rounded-3xl bg-slate-900/80 border border-slate-800 p-5 card-hover fade-up delay-2">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-lg font-semibold">Interactive Portfolio Website</h3>
+            <span class="px-3 py-1 rounded-full text-[11px] bg-indigo-500/10 text-indigo-300 border border-indigo-400/40">
+              Frontend
+            </span>
+          </div>
+          <p class="text-sm text-slate-300 mb-4">
+            A modern portfolio website built with Tailwind CSS and subtle animations, showcasing my profile as an IT
+            student at Universitas Raharja and highlighting my projects, including the WhatsApp auto-order bot.
+            Deployed using GitHub Pages.
+          </p>
+          <div class="flex flex-wrap gap-2 text-[11px]">
+            <span class="px-2.5 py-1 rounded-full bg-slate-800 border border-slate-700">Tailwind CSS</span>
+            <span class="px-2.5 py-1 rounded-full bg-slate-800 border border-slate-700">Responsive Design</span>
+            <span class="px-2.5 py-1 rounded-full bg-slate-800 border border-slate-700">GitHub Pages</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Campus / Maps -->
+    <section id="campus" class="py-12 md:py-16 border-t border-slate-800/70">
+      <div class="mb-6 flex items-center justify-between">
+        <div>
+          <h2 class="text-2xl md:text-3xl font-semibold mb-1">My Campus</h2>
+          <p class="text-sm text-slate-300">
+            Universitas Raharja · Modern, Jl. Jenderal Sudirman No. 40, Cikokol, Tangerang
+          </p>
+        </div>
+        <span class="hidden md:inline-flex text-xs uppercase tracking-[0.2em] text-slate-400">
+          Map & Location
+        </span>
+      </div>
+
+      <div class="grid lg:grid-cols-3 gap-6 items-start">
+        <div class="lg:col-span-1 fade-up">
+          <p class="text-sm text-slate-300 mb-3">
+            Universitas Raharja is a private university in Tangerang, Banten, known for its focus on technology,
+            business, and entrepreneurship. The campus is strategically located right in front of Tangerang City Mall
+            and near Situ Gede lake.
+          </p>
+          <p class="text-sm text-slate-300">
+            This is where I study Informatics Engineering, collaborate with other students, and build projects in a
+            modern learning environment that supports digital innovation.
+          </p>
+        </div>
+
+        <div class="lg:col-span-2 fade-up delay-2">
+          <div class="rounded-3xl overflow-hidden border border-slate-800 shadow-lg">
+            <!-- Google Maps Universitas Raharja -->
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.034247895558!2d106.63513897414694!3d-6.258817661291708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69fec40e0f2b63%3A0x85410542f0ec6f62!2sUniversitas%20Raharja!5e0!3m2!1sen!2sid!4v1700000000000!5m2!1sen!2sid"
+              width="100%"
+              height="320"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-12 md:py-16 border-t border-slate-800/70">
+      <div class="max-w-2xl mx-auto text-center fade-up">
+        <h2 class="text-2xl md:text-3xl font-semibold mb-3">Get In Touch</h2>
+        <p class="text-sm md:text-base text-slate-300 mb-6">
+          Interested in my projects, especially the WhatsApp auto-order bot, or want to collaborate on web development
+          and automation? Feel free to contact me through email or GitHub.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-3 justify-center items-center">
+          <a href="mailto:ahmad.syarifulloh@raharja.info"
+             class="inline-flex items-center gap-2 rounded-2xl bg-emerald-400 text-slate-950 font-semibold px-5 py-2.5 text-sm shadow-lg shadow-emerald-500/40 hover:shadow-emerald-400/70 hover:-translate-y-[2px] transition-transform">
+            Email Me
+          </a>
+          <a href="https://github.com/syarifraharja01" target="_blank"
+             class="inline-flex items-center gap-2 rounded-2xl border border-slate-700 px-5 py-2.5 text-sm hover:border-emerald-400 hover:text-emerald-200 transition-colors">
+            View my GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800/70 py-6 mt-4">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-2 text-xs text-slate-400">
+      <p>© <span id="year"></span> Ahmad Syarifulloh · Universitas Raharja</p>
+      <p>Built with Tailwind CSS & hosted on GitHub Pages.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Simple scroll reveal for fade-up elements
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('!opacity-100');
+            entry.target.style.animationPlayState = 'running';
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+
+    document.querySelectorAll('.fade-up').forEach(el => {
+      el.style.animationPlayState = 'paused';
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
