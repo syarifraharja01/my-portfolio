@@ -1,14 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Basic Meta -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ahmad Syarifulloh | Portfolio</title>
+
+  <title>Ahmad Syarifulloh | Informatics Engineering Student – Universitas Raharja</title>
+
+  <!-- SEO Meta -->
+  <meta name="description"
+        content="Official portfolio of Ahmad Syarifulloh, Informatics Engineering student at Universitas Raharja. Focused on web development, Tailwind CSS, and WhatsApp Auto Order Bot projects." />
+  <meta name="keywords"
+        content="Ahmad Syarifulloh, Universitas Raharja, Informatics Engineering, Teknik Informatika, Portfolio, Web Developer, Tailwind CSS, WhatsApp Bot, Automation" />
+  <meta name="author" content="Ahmad Syarifulloh" />
+
+  <!-- Open Graph (Social Preview) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Portfolio – Ahmad Syarifulloh | Universitas Raharja" />
+  <meta property="og:description"
+        content="Informatics Engineering student at Universitas Raharja. Web development & automation enthusiast, creator of WhatsApp Auto Order Bot." />
+  <meta property="og:image" content="https://your-domain.com/assets/foto-saya.jpg" />
+  <meta property="og:url" content="https://your-username.github.io/" />
+  <meta property="og:site_name" content="Portfolio Ahmad Syarifulloh" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Portfolio – Ahmad Syarifulloh | Universitas Raharja" />
+  <meta name="twitter:description"
+        content="Informatics Engineering student at Universitas Raharja. Web development & automation enthusiast." />
+  <meta name="twitter:image" content="https://your-domain.com/assets/foto-saya.jpg" />
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ahmad Syarifulloh",
+    "jobTitle": "Informatics Engineering Student",
+    "affiliation": {
+      "@type": "CollegeOrUniversity",
+      "name": "Universitas Raharja",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Modern, Jl. Jenderal Sudirman No. 40, Cikokol",
+        "addressLocality": "Tangerang",
+        "addressRegion": "Banten",
+        "postalCode": "15117",
+        "addressCountry": "ID"
+      }
+    },
+    "url": "https://your-username.github.io/",
+    "sameAs": [
+      "https://github.com/syarifraharja01",
+      "https://instagram.com/ahmadsyarifulloh.dev"
+    ]
+  }
+  </script>
 
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Google Font -->
+  <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -18,7 +70,7 @@
       font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     }
 
-    /* Simple fade-up animation */
+    /* Fade up animation */
     @keyframes fadeUp {
       from {
         opacity: 0;
@@ -41,13 +93,18 @@
     .delay-4 { animation-delay: 0.6s; }
 
     .card-hover {
-      transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background-color 0.25s ease,
+        border-color 0.25s ease;
     }
 
     .card-hover:hover {
       transform: translateY(-6px) scale(1.01);
-      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.25);
-      background-color: rgba(15, 23, 42, 0.9);
+      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.35);
+      border-color: rgba(52, 211, 153, 0.7);
+      background-color: rgba(15, 23, 42, 0.96);
     }
 
     .blob {
@@ -55,10 +112,14 @@
       opacity: 0.6;
       mix-blend-mode: screen;
     }
+
+    html {
+      scroll-behavior: smooth;
+    }
   </style>
 </head>
 <body class="bg-slate-950 text-slate-100">
-  <!-- Background blobs -->
+  <!-- Background decoration -->
   <div class="fixed inset-0 -z-10 overflow-hidden">
     <div class="blob absolute -top-32 -left-32 w-72 h-72 bg-emerald-500 rounded-full animate-pulse"></div>
     <div class="blob absolute top-1/3 -right-32 w-80 h-80 bg-indigo-500 rounded-full animate-pulse"></div>
@@ -66,15 +127,16 @@
   </div>
 
   <!-- Navbar -->
-  <header class="sticky top-0 z-20 backdrop-blur bg-slate-950/70 border-b border-slate-800/60">
+  <header class="sticky top-0 z-20 backdrop-blur bg-slate-950/75 border-b border-slate-800/60">
     <nav class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
       <div class="flex items-center gap-2">
-        <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-emerald-400 to-amber-400 flex items-center justify-center text-slate-900 font-bold text-lg shadow-lg">
-          A
+        <div class="w-8 h-8 rounded-full object-cover bg-gradient-to-tr from-emerald-400 to-amber-400 flex items-center justify-center text-slate-900 font-bold text-lg shadow-lg">
+          <img class="object-cover rounded-full" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgvBDouyPfHfIAe8sYpFDvFU5IUy_YqU-pTifRb8RC-KFxXJDsxo1JXzKxP6sLunud8kwLhB4Zf2sW_bTnMWZ0mpf4j-DdOi0FylAxq1QofWnfNMeO8LxAdfNnLJbeEWMa4PoYplMKGR3qWJBYa1O4FkwY5uySYS6KeM1YcfINIGb59US_fWGdS-3imaVo/w504-h504/PP.jpg" alt="Foto saya">
         </div>
-        <span class="font-semibold tracking-tight">Ahmad Syarifulloh</span>
+        <span class="font-semibold tracking-tight text-sm md:text-base">Ahmad Syarifulloh</span>
       </div>
-      <div class="flex gap-4 text-sm">
+      <div class="flex gap-4 text-xs md:text-sm">
+        <a href="#hero" class="hover:text-emerald-300 transition">Home</a>
         <a href="#about" class="hover:text-emerald-300 transition">About</a>
         <a href="#projects" class="hover:text-emerald-300 transition">Projects</a>
         <a href="#campus" class="hover:text-emerald-300 transition">Campus</a>
@@ -84,21 +146,23 @@
   </header>
 
   <main class="max-w-6xl mx-auto px-4">
-    <!-- Hero -->
+    <!-- HERO -->
     <section id="hero" class="min-h-[80vh] flex flex-col md:flex-row items-center gap-10 md:gap-16 pt-10 md:pt-16">
       <!-- Text -->
       <div class="flex-1 fade-up">
-        <p class="text-emerald-300 font-medium mb-2 uppercase tracking-[0.2em] text-xs">
-          IT Student · Universitas Raharja
+        <p class="text-emerald-300 font-medium mb-2 uppercase tracking-[0.22em] text-[11px]">
+          Informatics Engineering Student · Universitas Raharja
         </p>
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4">
-          Building interactive web experiences & automation.
+        <h1 class="text-3xl md:text-5xl lg:text-[3.2rem] font-bold tracking-tight mb-4 leading-tight">
+          Crafting interactive web experiences<br class="hidden md:block" />
+          & automation for real problems.
         </h1>
         <p class="text-slate-300 text-sm md:text-base max-w-xl mb-6">
-          Hi! I’m <span class="font-semibold text-emerald-300">Ahmad Syarifulloh</span>, a
-          <span class="font-semibold">Informatics Engineering (S1 Teknik Informatika)</span> student
-          at <span class="font-semibold">Universitas Raharja</span>, Tangerang. I love working with
-          modern web technologies, Tailwind CSS, and automation projects like WhatsApp auto-order bots.
+          I’m <span class="font-semibold text-emerald-300">Ahmad Syarifulloh</span>, an
+          <span class="font-semibold">Informatics Engineering (S1 Teknik Informatika)</span> student at
+          <span class="font-semibold">Universitas Raharja</span> in Tangerang. I enjoy building modern web
+          interfaces with Tailwind CSS and developing automation like a <strong>WhatsApp Auto Order Bot</strong>
+          for small businesses.
         </p>
         <div class="flex flex-wrap gap-3 mb-6">
           <a href="#projects"
@@ -111,7 +175,7 @@
             Contact Me
           </a>
         </div>
-        <div class="flex flex-wrap gap-2 text-xs text-slate-300">
+        <div class="flex flex-wrap gap-2 text-[11px] md:text-xs text-slate-300">
           <span class="px-3 py-1 rounded-full bg-slate-900/70 border border-slate-700/70">Tailwind CSS</span>
           <span class="px-3 py-1 rounded-full bg-slate-900/70 border border-slate-700/70">JavaScript</span>
           <span class="px-3 py-1 rounded-full bg-slate-900/70 border border-slate-700/70">WhatsApp Bot</span>
@@ -121,52 +185,66 @@
 
       <!-- Profile Card -->
       <div class="flex-1 flex justify-center fade-up delay-2">
-        <div class="relative w-64 h-64 md:w-72 md:h-72">
+        <div class="relative w-64 h-72 md:w-72 md:h-80">
+          <!-- Glow -->
           <div class="absolute inset-0 rounded-3xl bg-gradient-to-tr from-emerald-400 via-amber-400 to-indigo-500 blur-xl opacity-60"></div>
+          <!-- Card -->
           <div class="relative h-full rounded-3xl bg-slate-950/90 border border-slate-800 shadow-xl p-4 flex flex-col justify-between">
-            <div class="flex items-center gap-4">
-              <div class="w-20 h-20 rounded-2xl overflow-hidden border border-slate-700 bg-slate-800">
-                <!-- GANTI dengan foto kamu sendiri -->
-                <img src="assets/foto-saya.jpg" alt="Ahmad Syarifulloh" class="w-full h-full object-cover">
+            <div>
+              <div class="flex items-center gap-4">
+                <div class="w-20 h-20 rounded-2xl overflow-hidden border border-slate-700 bg-slate-800">
+                  <!-- Ganti dengan foto kamu -->
+                  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgvBDouyPfHfIAe8sYpFDvFU5IUy_YqU-pTifRb8RC-KFxXJDsxo1JXzKxP6sLunud8kwLhB4Zf2sW_bTnMWZ0mpf4j-DdOi0FylAxq1QofWnfNMeO8LxAdfNnLJbeEWMa4PoYplMKGR3qWJBYa1O4FkwY5uySYS6KeM1YcfINIGb59US_fWGdS-3imaVo/w504-h504/PP.jpg" alt="Photo of Ahmad Syarifulloh"
+                       class="w-full h-full object-cover">
+                </div>
+                <div>
+                  <p class="text-xs text-slate-400 mb-1">Portfolio Owner</p>
+                  <h2 class="text-lg font-semibold">Ahmad Syarifulloh</h2>
+                  <p class="text-xs text-emerald-300 font-medium">
+                    S1 Teknik Informatika · Universitas Raharja
+                  </p>
+                </div>
               </div>
-              <div>
-                <p class="text-xs text-slate-400 mb-1">Portfolio Owner</p>
-                <h2 class="text-lg font-semibold">Ahmad Syarifulloh</h2>
-                <p class="text-xs text-emerald-300 font-medium">S1 Teknik Informatika · Universitas Raharja</p>
+              <div class="mt-4 text-xs text-slate-300 space-y-1">
+                <p>💻 Web Development & Tailwind CSS</p>
+                <p>🤖 WhatsApp Auto Order Bot</p>
+                <p>📍 Tangerang, Banten – Indonesia</p>
               </div>
             </div>
-            <div class="mt-4 text-xs text-slate-300 space-y-1">
-              <p>💻 Focus: Web development & automation</p>
-              <p>🤖 Project: WhatsApp Auto Order Bot</p>
-              <p>📍 Tangerang, Banten – Indonesia</p>
+
+            <div class="mt-4 flex items-center justify-between text-[11px] text-slate-400">
+              <span>Available for collaboration</span>
+              <span class="px-2 py-1 rounded-full bg-emerald-500/10 text-emerald-300 border border-emerald-400/40">
+                IT & Automation
+              </span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- About -->
+    <!-- ABOUT -->
     <section id="about" class="py-12 md:py-16 border-t border-slate-800/70">
-      <div class="grid md:grid-cols-2 gap-10 items-start">
-        <div class="fade-up">
+      <div class="grid lg:grid-cols-3 gap-10 items-start">
+        <div class="lg:col-span-2 fade-up">
           <h2 class="text-2xl md:text-3xl font-semibold mb-3">About Me</h2>
           <p class="text-slate-300 text-sm md:text-base mb-4">
             I am an <span class="font-semibold text-emerald-300">Informatics Engineering student (S1 Teknik Informatika)</span>
-            at <span class="font-semibold">Universitas Raharja</span>, a modern university in Tangerang that focuses on
-            technology, business, and entrepreneurship.
+            at <span class="font-semibold">Universitas Raharja</span>, a university in Tangerang that focuses on
+            technology, digital creativity, and entrepreneurship.
           </p>
           <p class="text-slate-300 text-sm md:text-base mb-4">
-            The study program emphasizes software engineering, smart systems, and digital innovation. I really enjoy
-            turning ideas into digital products, especially web applications and automation tools that can help real
-            businesses and users.
+            I enjoy turning ideas into working digital products – especially interactive web interfaces and automation
+            that can help businesses be more efficient. Recently, I’ve been focusing on building a
+            <strong>WhatsApp Auto Order Bot</strong> that makes ordering via chat faster and more structured.
           </p>
           <p class="text-slate-300 text-sm md:text-base">
-            My current interests include building interactive UIs with Tailwind CSS, exploring APIs, and creating bots
-            that simplify repetitive workflows such as ordering through WhatsApp.
+            Outside of coding, I’m interested in UI/UX, product thinking, and learning how software can support real
+            business workflows. I love experimenting, learning from projects, and continuously improving my skills.
           </p>
         </div>
 
-        <div class="fade-up delay-2">
+        <div class="lg:col-span-1 fade-up delay-2">
           <div class="grid grid-cols-2 gap-4">
             <div class="rounded-2xl bg-slate-900/80 border border-slate-800 p-4 card-hover">
               <p class="text-xs text-slate-400 mb-1">Main Skills</p>
@@ -189,11 +267,38 @@
       </div>
     </section>
 
-    <!-- Projects -->
+    <!-- CAMPUS IMAGE STRIP -->
+    <section class="pb-4 fade-up">
+      <div class="rounded-3xl overflow-hidden border border-slate-800 bg-slate-900/60 card-hover">
+        <div class="grid md:grid-cols-2 gap-0">
+          <div class="relative h-52 md:h-64">
+            <!-- Ganti dengan foto kampus -->
+            <img src= "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhsRFiL_FYxa3jt0xC5ZngKveAyuDyi92GR92gv7W1L2rVdjMDxgWA1xoN7AXRbKaphzOdV-B1qY6MPyKazYAi_N5NtYLMe6PupHuFiIFnCZ-OwZdrcodFmqTjgUM9JTkhKYTx48jC3Hu-S1XKWFucB1HO1uCVPgX7zyW7hta06rDpH5H2cm2xr_PSiC_M/w364-h364/logo-raharja.png"
+                 alt="Universitas Raharja Campus in Tangerang"
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 to-transparent"></div>
+            <div class="absolute bottom-3 left-4 text-xs text-slate-100">
+              <p class="font-semibold">Universitas Raharja</p>
+              <p class="text-slate-300">Modern, Jl. Jenderal Sudirman No. 40, Cikokol, Tangerang</p>
+            </div>
+          </div>
+          <div class="p-5 flex flex-col justify-center">
+            <h3 class="text-lg font-semibold mb-2">Learning in a Digital Campus</h3>
+            <p class="text-sm text-slate-300">
+              Universitas Raharja supports digital learning with modern facilities, innovative programs, and a strong
+              focus on information technology and entrepreneurship. It’s an ideal environment for growing as a
+              developer and technology enthusiast.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
     <section id="projects" class="py-12 md:py-16 border-t border-slate-800/70">
       <div class="flex items-center justify-between mb-6">
         <h2 class="text-2xl md:text-3xl font-semibold">Projects</h2>
-        <span class="text-xs uppercase tracking-[0.2em] text-slate-400">Selected works</span>
+        <span class="text-xs uppercase tracking-[0.2em] text-slate-400">Selected Works</span>
       </div>
 
       <div class="grid md:grid-cols-2 gap-6">
@@ -206,23 +311,23 @@
             </span>
           </div>
           <p class="text-sm text-slate-300 mb-4">
-            A WhatsApp bot that helps customers place orders automatically through chat. The bot guides users through
-            product selection, quantity, and address, then forwards the structured data to the system or admin for
-            processing. This makes the ordering process faster and more efficient.
+            A WhatsApp bot that guides customers through the ordering process directly via chat. The bot handles product
+            selection, quantity, and address, and then sends the order data to the admin/system in a structured format.
+            It’s designed to help small businesses manage orders more efficiently.
           </p>
           <ul class="text-xs text-slate-400 space-y-1 mb-4 list-disc list-inside">
-            <li>Auto-reply for new and returning customers</li>
+            <li>Automatic greetings and responses for new and existing customers</li>
             <li>Step-by-step order flow (product → quantity → address)</li>
-            <li>Can be integrated with a simple database or spreadsheet</li>
+            <li>Can connect to simple database or spreadsheet for logging orders</li>
           </ul>
           <div class="flex flex-wrap gap-2 text-[11px]">
-            <span class="px-2.5 py-1 rounded-full bg-slate-800 border border-slate-700">Node.js / JavaScript</span>
+            <span class="px-2.5 py-1 rounded-full bg-slate-800 border border-slate-700">JavaScript / Node.js</span>
             <span class="px-2.5 py-1 rounded-full bg-slate-800 border border-slate-700">WhatsApp API / Library</span>
-            <span class="px-2.5 py-1 rounded-full bg-slate-800 border border-slate-700">GitHub</span>
+            <span class="px-2.5 py-1 rounded-full bg-slate-800 border border-slate-700">Automation</span>
           </div>
         </article>
 
-        <!-- Portfolio site -->
+        <!-- Portfolio Website -->
         <article class="rounded-3xl bg-slate-900/80 border border-slate-800 p-5 card-hover fade-up delay-2">
           <div class="flex items-center justify-between mb-3">
             <h3 class="text-lg font-semibold">Interactive Portfolio Website</h3>
@@ -231,9 +336,9 @@
             </span>
           </div>
           <p class="text-sm text-slate-300 mb-4">
-            A modern portfolio website built with Tailwind CSS and subtle animations, showcasing my profile as an IT
-            student at Universitas Raharja and highlighting my projects, including the WhatsApp auto-order bot.
-            Deployed using GitHub Pages.
+            A personal portfolio site (this website) designed to highlight my profile as an Informatics Engineering
+            student at Universitas Raharja. Built with Tailwind CSS, responsive layout, smooth animations, and SEO
+            optimization, and deployed using GitHub Pages.
           </p>
           <div class="flex flex-wrap gap-2 text-[11px]">
             <span class="px-2.5 py-1 rounded-full bg-slate-800 border border-slate-700">Tailwind CSS</span>
@@ -244,13 +349,13 @@
       </div>
     </section>
 
-    <!-- Campus / Maps -->
+    <!-- CAMPUS MAP -->
     <section id="campus" class="py-12 md:py-16 border-t border-slate-800/70">
       <div class="mb-6 flex items-center justify-between">
         <div>
           <h2 class="text-2xl md:text-3xl font-semibold mb-1">My Campus</h2>
           <p class="text-sm text-slate-300">
-            Universitas Raharja · Modern, Jl. Jenderal Sudirman No. 40, Cikokol, Tangerang
+            Universitas Raharja – Modern, Jl. Jenderal Sudirman No. 40, Cikokol, Tangerang, Banten 15117
           </p>
         </div>
         <span class="hidden md:inline-flex text-xs uppercase tracking-[0.2em] text-slate-400">
@@ -261,13 +366,12 @@
       <div class="grid lg:grid-cols-3 gap-6 items-start">
         <div class="lg:col-span-1 fade-up">
           <p class="text-sm text-slate-300 mb-3">
-            Universitas Raharja is a private university in Tangerang, Banten, known for its focus on technology,
-            business, and entrepreneurship. The campus is strategically located right in front of Tangerang City Mall
-            and near Situ Gede lake.
+            Universitas Raharja is located in Tangerang, right in front of Tangerang City Mall. It offers a modern
+            digital environment, focusing on technology, business, and creative innovation.
           </p>
           <p class="text-sm text-slate-300">
-            This is where I study Informatics Engineering, collaborate with other students, and build projects in a
-            modern learning environment that supports digital innovation.
+            This is where I build my projects, collaborate with friends, and continue to grow my skills in software
+            development and automation.
           </p>
         </div>
 
@@ -281,27 +385,28 @@
               style="border:0;"
               allowfullscreen=""
               loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade">
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Google Maps – Universitas Raharja">
             </iframe>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Contact -->
+    <!-- CONTACT -->
     <section id="contact" class="py-12 md:py-16 border-t border-slate-800/70">
       <div class="max-w-2xl mx-auto text-center fade-up">
         <h2 class="text-2xl md:text-3xl font-semibold mb-3">Get In Touch</h2>
         <p class="text-sm md:text-base text-slate-300 mb-6">
-          Interested in my projects, especially the WhatsApp auto-order bot, or want to collaborate on web development
-          and automation? Feel free to contact me through email or GitHub.
+          Interested in my projects, especially the WhatsApp Auto Order Bot, or want to collaborate on web development
+          and automation? Feel free to reach out to me.
         </p>
         <div class="flex flex-col sm:flex-row gap-3 justify-center items-center">
           <a href="mailto:ahmad.syarifulloh@raharja.info"
              class="inline-flex items-center gap-2 rounded-2xl bg-emerald-400 text-slate-950 font-semibold px-5 py-2.5 text-sm shadow-lg shadow-emerald-500/40 hover:shadow-emerald-400/70 hover:-translate-y-[2px] transition-transform">
             Email Me
           </a>
-          <a href="https://github.com/syarifraharja01" target="_blank"
+          <a href="https://github.com/syarifraharja01" target="_blank" rel="noopener noreferrer"
              class="inline-flex items-center gap-2 rounded-2xl border border-slate-700 px-5 py-2.5 text-sm hover:border-emerald-400 hover:text-emerald-200 transition-colors">
             View my GitHub
           </a>
@@ -310,19 +415,19 @@
     </section>
   </main>
 
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer class="border-t border-slate-800/70 py-6 mt-4">
     <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-2 text-xs text-slate-400">
       <p>© <span id="year"></span> Ahmad Syarifulloh · Universitas Raharja</p>
-      <p>Built with Tailwind CSS & hosted on GitHub Pages.</p>
+      <p>Built with Tailwind CSS · Hosted on GitHub Pages</p>
     </div>
   </footer>
 
   <script>
-    // Set current year in footer
+    // Dynamic year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Simple scroll reveal for fade-up elements
+    // Scroll reveal
     const observer = new IntersectionObserver(
       entries => {
         entries.forEach(entry => {
